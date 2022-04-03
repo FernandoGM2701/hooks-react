@@ -1,4 +1,4 @@
-import { React, useState, UseEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const HookUseEffect = () => {
   const [counter, setCounter] = useState(0);
