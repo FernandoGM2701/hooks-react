@@ -21,9 +21,9 @@ const ListDataWithUseEffect = () => {
     <div>
       <h1>ListDataf</h1>
       <ul>
-         { data.map( (item) => {
+         { data.map( (item, index) => {
            return (
-            <li key="item.id" > {item.name} </li>
+            <li key= {index} > {item.name} </li>
            )
          }) 
          }
