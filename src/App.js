@@ -1,3 +1,4 @@
+import UseCallback from "./components/UseCallback/UseCallback";
 import UseEffect from "./components/UseEffect/UseEffect";
 import UseState from "./components/UseState/UseState";
 import "./styles.css";
@@ -8,7 +9,8 @@ return (
     <div>
       <p>Repaso de Hooks!!! FGM</p>
       {/* <UseState/> */}
-      <UseEffect/>
+      {/* <UseEffect/> */}
+      <UseCallback />
     </div>  
   );
 }
