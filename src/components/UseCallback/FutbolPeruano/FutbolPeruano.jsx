@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import ListaEquipos from '../ListaEquipos/ListaEquipos'
 
 const FutbolPeruano = () => {
@@ -18,11 +18,17 @@ const FutbolPeruano = () => {
     )
   };
   
-  const eliminarEquipo = (id) => {
+  // const eliminarEquipo = (id) => {
+    // return(
+    //   setEquipo(equipo.filter(item => item.id !== id))
+    // )
+  // };
+
+  const eliminarEquipo = useCallback( ( (id) => {
     return(
-      setEquipo(equipo.filter( item => item.id !== id))
+      setEquipo(equipo.filter(item => item.id !== id))
     )
-  };
+  }), [equipo] );
 
   console.log("Futbol peruano renderizado");
   

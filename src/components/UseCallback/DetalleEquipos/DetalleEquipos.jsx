@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const DetalleEquipos = ({item, eliminarEquipo}) => {
+const DetalleEquipos = memo(({item, eliminarEquipo}) => {
   console.log("Detalle de equipos renderizado");
   return (
     <>
@@ -8,6 +8,6 @@ const DetalleEquipos = ({item, eliminarEquipo}) => {
       <button onClick={ () => eliminarEquipo(item.id)}> Eliminar equipo</button>
     </>
   );
-};
+});
 
 export default DetalleEquipos;

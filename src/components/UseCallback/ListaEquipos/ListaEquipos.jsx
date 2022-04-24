@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import DetalleEquipos from '../DetalleEquipos/DetalleEquipos';
 
-const ListaEquipos = ({equipo, eliminarEquipo}) => {
+
+
+const ListaEquipos = memo(({equipo, eliminarEquipo}) => {
   console.log("Lista de equipos renderizada");
   return (  
     <ul>
@@ -10,6 +12,6 @@ const ListaEquipos = ({equipo, eliminarEquipo}) => {
       ))}
     </ul>
   )
-}
+});
 
 export default ListaEquipos;
