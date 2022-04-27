@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 const ComponentUseMemo = ({lista}) => {
   
@@ -12,7 +12,9 @@ const ComponentUseMemo = ({lista}) => {
     }
     return contador;
   }
-  const resultado = calculo(lista);
+  
+  // const resultado = calculo(lista);
+  const resultado = useMemo(  () => calculo(lista), [lista] );
 
   return (
     <>
