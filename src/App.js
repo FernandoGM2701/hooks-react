@@ -1,6 +1,7 @@
 import UseCallback from "./components/UseCallback/UseCallback";
 import UseEffect from "./components/UseEffect/UseEffect";
 import UseMemo from "./components/UseMemo/UseMemo";
+import UseReducer from "./components/UseReducer/UseReducer";
 import UseState from "./components/UseState/UseState";
 import "./styles.css";
 
@@ -12,7 +13,8 @@ return (
       {/* <UseState/> */}
       {/* <UseEffect/> */}
       {/* <UseCallback /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
+      <UseReducer />
     </div>  
   );
 }
