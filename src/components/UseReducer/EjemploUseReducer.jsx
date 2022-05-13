@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 
 const EjemploUseReducer = () => {
   const initialState = {
@@ -15,17 +15,43 @@ const EjemploUseReducer = () => {
       },
     },
   };
-  const [user, setUser] = React.useState(initialState);
+  
+  const reducer = (state, action) => {
+    // lógica de actualización de estado...
+    if (action.type === 'UPDATE_NAME'){
+      return {...state, name: action.payload.name}
+    }
 
-  React.useEffect(() => {
-    setUser({
-      ...user,
-      foo: {
-        ...user.foo,
-        foo1: {...user.foo.foo1, foo2: {...user.foo.foo1.foo2, name: 'test'}},
-      },
-    });
+    if (action.type === 'UPDATE_NAME'){
+      return {...state, name: action.payload.name}
+    }
+
+    if (action.type === 'UPDATE_NAME'){
+      return {...state, name: action.payload.name}
+    }
+
+    return state;
+  }
+  // const [user, setUser] = useState(initialState);
+  const [user, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    // setUser({
+    //   ...user,
+    //   foo: {
+    //     ...user.foo,
+    //     foo1: {...user.foo.foo1, foo2: {...user.foo.foo1.foo2, name: 'test'}},
+    //   },
+    // });
+    const action ={
+      type: 'UPDATE_NAME',
+      payload: {
+        name: 'Fer Gutierrez'
+      }
+    };
+    dispatch(action);
   }, []);
+  
 
   return `Example: ${JSON.stringify(user)}`;
 };
