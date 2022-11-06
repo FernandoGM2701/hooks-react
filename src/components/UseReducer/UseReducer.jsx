@@ -4,10 +4,10 @@ import EjemploUseReducer from './EjemploUseReducer'
 const UseReducer = () => {
   return (
     <>
-      <h1>UseReducer</h1>
+      <h1> UseReducer </h1>
       <EjemploUseReducer />
     </>
   )
 }
 
-export default UseReducer
+export default UseReducer;
